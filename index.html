@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEIXSE - Dark Mobile App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    <div class="mobile-container">
+        <!-- Header -->
+        <header>
+            <div class="header-item">
+                <div class="pill-button">1 DAY</div>
+                <span class="label">TIME</span>
+            </div>
+            <div class="header-item">
+                <h1>WEIXSE</h1>
+                <span class="label">YOUR NAME</span>
+            </div>
+            <div class="header-item">
+                <div class="pill-button theme-toggle">
+                    <span class="moon-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                        </svg>
+                    </span>
+                    <span class="bell-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+                            <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
+                        </svg>
+                    </span>
+                </div>
+                <span class="label">THEME</span>
+            </div>
+        </header>
+
+        <!-- Level Progress -->
+        <div class="level-progress">
+            <div class="level-labels">
+                <span>1 LVL</span>
+                <span>2 LVL</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="levelProgress"></div>
+            </div>
+            <div class="progress-info">
+                <span id="progressCounter">10/1024</span>
+                <button class="refresh-button">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path>
+                        <path d="M21 3v5h-5"></path>
+                        <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path>
+                        <path d="M3 21v-5h5"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Megabyte Counter -->
+        <div class="megabyte-section">
+            <button class="circle-button decrease-button">
+              <img src="assets/images/Group 340.svg" alt="">
+            </button>
+            <div class="counter-container">
+                <h2 id="megabyteCounter">1 024 </h2>
+                <span class="label">MEGABYTE</span>
+            </div>
+            <button class="circle-button increase-button">
+           <img src="assets/images/Group 342.svg" alt="">
+            </button>
+        </div>
+
+        <!-- Character Image -->
+        <div class="character-container">
+            <img src="assets/images/main.png" alt="Character in top hat and mask" class="character-image click-top">
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <div class="nav-item" data-section="gift">
+                <div class="nav-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 12v10H4V12"></path>
+                        <path d="M2 7h20v5H2z"></path>
+                        <path d="M12 22V7"></path>
+                        <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
+                        <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+                    </svg>
+                </div>
+                <span class="nav-label">GIFT</span>
+            </div>
+            <div class="nav-item" data-section="task">
+                <div class="nav-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <line x1="10" y1="9" x2="8" y2="9"></line>
+                    </svg>
+                </div>
+                <span class="nav-label">TASK</span>
+            </div>
+            <div class="nav-item active" data-section="home">
+                <div class="nav-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </div>
+                <span class="nav-label">HOME</span>
+            </div>
+            <div class="nav-item" data-section="stats">
+                <div class="nav-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 3v18h18"></path>
+                        <path d="m19 9-5 5-4-4-3 3"></path>
+                    </svg>
+                </div>
+                <span class="nav-label">STATS</span>
+            </div>
+            <div class="nav-item" data-section="friends">
+                <div class="nav-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+                <span class="nav-label">FRIENDS</span>
+            </div>
+        </nav>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
