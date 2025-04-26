@@ -188,3 +188,37 @@ document.addEventListener('DOMContentLoaded', function() {
             }, index * 100);
         });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const navItems = document.querySelectorAll('.nav-item');
+    const navLabels = document.querySelectorAll('.nav-label');
+    
+    // Function to update active states
+    function setActiveTab(section) {
+        // Remove active class from all items and labels
+        navItems.forEach(item => item.classList.remove('active'));
+        navLabels.forEach(label => label.classList.remove('active'));
+        
+        // Add active class to the clicked item
+        const activeItem = document.querySelector(`.nav-item[data-section="${section}"]`);
+        const activeLabel = document.querySelector(`.nav-label[data-for="${section}"]`);
+        
+        if (activeItem) activeItem.classList.add('active');
+        if (activeLabel) activeLabel.classList.add('active');
+    }
+    
+    // Add click event listeners to nav items
+    navItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const section = this.getAttribute('data-section');
+            setActiveTab(section);
+        });
+    });
+    
+    // Add click event listeners to labels (optional, for better UX)
+    navLabels.forEach(label => {
+        label.addEventListener('click', function() {
+            const section = this.getAttribute('data-for');
+            setActiveTab(section);
+        });
+    });
+});
